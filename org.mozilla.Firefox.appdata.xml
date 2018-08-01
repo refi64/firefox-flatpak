@@ -1,22 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="desktop">
   <id>org.mozilla.Firefox.desktop</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>MPL-2.0</project_license>
+
+  <categories>
+    <category>Utility</category>
+  </categories>
+
   <name>Firefox</name>
-  <metadata_license>GPL-2.0</metadata_license>
-  <summary>Browse the Web</summary>
-  <description>
-    <p>
-    Bringing together all kinds of awesomeness to make browsing better for you. Get to your favorite sites quickly – even if you don’t remember the URLs. Type your term into the location bar (aka the Awesome Bar) and the autocomplete function will include possible matches from your browsing history, bookmarked sites and open tabs.
-    </p>
-  </description>
-  <url type="homepage">https://www.mozilla.org/en-US/</url>
+  <name xml:lang="ar">فايرفوكس</name>
+  <name xml:lang="bn">ফায়ার ফক্স</name>
+  <name xml:lang="es">Firefox</name>
+  <name xml:lang="fr">Firefox</name>
+  <name xml:lang="hi">Firefox</name>
+  <name xml:lang="id">Firefox</name>
+  <name xml:lang="pt_BR">Firefox</name>
+  <name xml:lang="ro">Firefox</name>
+  <name xml:lang="th">Firefox</name>
+  <name xml:lang="vi">Firefox</name>
+  <name xml:lang="zh_CN">Firefox</name>
+  <name xml:lang="zh_TW">Firefox</name>
+
+  <summary>Mozilla's popular web browser</summary>
+  <summary xml:lang="ar">متصفح ويب موزيلا الشهير</summary>
+  <summary xml:lang="es">El navegador popular de Mozilla</summary>
+  <summary xml:lang="fr">Fameux navigateur web de Mozilla</summary>
+  <summary xml:lang="hi">Mozilla का लोकप्रिय वेब ब्राउज़र</summary>
+  <summary xml:lang="id">Peramban web populer dari Mozilla</summary>
+  <summary xml:lang="pt_BR">O famoso navegador da Mozilla</summary>
+  <summary xml:lang="ro">Browser-ul web popular Mozilla</summary>
+  <summary xml:lang="th">เว็บเบราว์เซอร์ยอดนิยมของ Mozilla</summary>
+  <summary xml:lang="vi">Trình duyệt web phổ biến của Mozilla</summary>
+  <summary xml:lang="zh_CN">Mozilla 出品的一款非常受欢迎的 Web 浏览器</summary>
+  <summary xml:lang="zh_TW">Mozilla 的熱門網頁瀏覽器</summary>
+
+  <description><p>Firefox is one of the world's most popular web browsers. If you have trouble with websites that require Java support, try Firefox. ** Requires internet</p></description>
+  <description xml:lang="ar"><p>فايرفوكس هو واحد من متصفحات الويب الأكثر شعبية في العالم. إذا واجهتك مشكلة في مواقع الويب التي تتطلب دعم الجافا، فجرّب فايرفوكس. ** يتطلب الإنترنت</p></description>
+  <description xml:lang="es"><p>Mozilla Firefox es uno de los navegadores más populares del mundo. Si tienes problemas con sitios web que requieren soporte de Java, prueba Firefox. ** Requiere Internet</p></description>
+  <description xml:lang="fr"><p>Firefox est l'un des navigateurs web les plus populaires. Si vous rencontrez des difficultés avec des sites internet nécessitant l'activation de Java, essayez Firefox. ** Nécessite internet</p></description>
+  <description xml:lang="hi"><p>Firefox विश्व के सबसे लोकप्रिय वेब ब्राउज़र में से एक है. यदि आपको ऐसी वेबसाइटों के साथ समस्या आ रही है जिनके लिए Java समर्थन की आवश्यकता होती है, तो Firefox आज़माएँ. ** इंटरनेट आवश्यक</p></description>
+  <description xml:lang="id"><p>Firefox adalah salah satu peramban web yang paling populer. Jika Anda  menemukan masalah dengan situs web yang membutuhkan dukungan Java, gunakan Firefox. **Membutuhkan koneksi internet</p></description>
+  <description xml:lang="pt_BR"><p>O Firefox é um dos navegadores mais usados em todo o mundo. Se você está experimentando problemas com sites na internet que requerem suporte Java, experimente o Firefox. ** Necessita de internet</p></description>
+  <description xml:lang="ro"><p>Firefox este unul dintre cele mai populare brwosere web.Daca ai probleme cu anumite site-uri care necesita Java, incearca Firefox. **Necesita internet</p></description>
+  <description xml:lang="th"><p>Firefox เป็นหนึ่งในเว็บเบราว์เซอร์ที่ได้รับความนิยมมากที่สุดในโลก หากคุณประสบปัญหากับเว็บไซต์ที่ต้องการการสนับสนุน Java ลองใช้ Firefox ดูสิ ** ต้องต่ออินเทอร์เน็ต</p></description>
+  <description xml:lang="vi"><p>Firefox là một trong những trình duyệt web phổ biến nhất trên thế giới. Nếu bạn đang gặp rắc rối với các trang web yêu cầu hỗ trợ Java, hãy thử dùng Firefox. **Cần có Internet</p></description>
+  <description xml:lang="zh_CN"><p>Firefox 是一款在全球非常流行的 Web 浏览器。如果你在访问需要 Java 支持的网站时遇到问题，不妨试一试 Firefox。** 需要 Internet 连接</p></description>
+  <description xml:lang="zh_TW"><p>Firefox 是世界上最熱門的網頁瀏覽器之一。若您在瀏覽需要 Java 支援的網站時遇到問題，就試試 Firefox 吧。** 需要網路</p></description>
+
   <screenshots>
     <screenshot type="default">
       <image>https://d3lapyynmdp1i9.cloudfront.net/screenshots/org.mozilla.Firefox/C/org.mozilla.firefox-screenshot1.jpg</image>
     </screenshot>
   </screenshots>
-  <project_license>GPL-2.0+</project_license>
+
+  <metadata>
+    <value key="GnomeSoftware::popular-background">https://d3lapyynmdp1i9.cloudfront.net/thumbnails/org.mozilla.Firefox/org.mozilla.firefox-thumb.jpg</value>
+  </metadata>
+
+  <content_rating type="oars-1.1">
+    <content_attribute id="social-chat">intense</content_attribute>
+    <content_attribute id="social-info">intense</content_attribute>
+    <content_attribute id="social-audio">intense</content_attribute>
+  </content_rating>
+
   <developer_name>The Mozilla Foundation</developer_name>
+  <url type="homepage">https://www.mozilla.org/</url>
   <url type="bugtracker">https://bugzilla.mozilla.org/describecomponents.cgi?product=Firefox</url>
   <url type="help">https://support.mozilla.org/en-US/kb/get-started-firefox-overview-main-features</url>
 </component>
