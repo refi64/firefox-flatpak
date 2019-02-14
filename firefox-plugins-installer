@@ -76,7 +76,7 @@ fetch_flash_metadata() {
     fi
 
     if [ -z ${FLASH_LKGV_URL} ]; then
-        echo "Failed to retrieve the last known good version of the flash plugin"
+        echo "Failed to retrieve the last known good version of the Flash plugin"
         return 1
     fi
 
