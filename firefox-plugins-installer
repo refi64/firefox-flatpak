@@ -46,10 +46,6 @@ JAVA_SHA256SUM=355e5cdb066d4cada1f9f16f358b6fa6280ff5caf7470cf0d5cdd43083408d35
 JAVA_LINK=${PLUGINS_DIR}/libnpjp2.so
 
 # Data needed for the Flash plugin, from Adobe
-FLASH_FALLBACK_VERSION="32.0.0.114"
-FLASH_FALLBACK_URL="https://fpdownload.adobe.com/pub/flashplayer/pdc/${FLASH_FALLBACK_VERSION}/flash_player_npapi_linux.$(arch).tar.gz"
-FLASH_FALLBACK_SHA256SUM="755474fa052c7243188f018176b22e5e1f2eca576c88465058167ba62a64df9e"
-
 FLASH_LKGV_FILE_URL="https://s3-us-west-2.amazonaws.com/abacadaba/flashplugin-$(arch).lkgv"
 FLASH_LKGV_VERSION=
 FLASH_LKGV_URL=
@@ -80,12 +76,8 @@ fetch_flash_metadata() {
     fi
 
     if [ -z ${FLASH_LKGV_URL} ]; then
-        echo "Failed to retrieve the last known good version of the flash plugin"
-        echo "Using fallbacks values (Flash plugin version: ${FLASH_FALLBACK_VERSION})"
-
-        FLASH_LKGV_VERSION="${FLASH_FALLBACK_VERSION}"
-        FLASH_LKGV_SHA256SUM="${FLASH_FALLBACK_SHA256SUM}"
-        FLASH_LKGV_URL="${FLASH_FALLBACK_URL}"
+        echo "Failed to retrieve the last known good version of the Flash plugin"
+        return 1
     fi
 
     # This will be needed then downloading and installing
