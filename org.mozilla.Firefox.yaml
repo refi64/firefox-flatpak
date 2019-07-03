@@ -27,6 +27,7 @@ finish-args:
   - '--talk-name=org.gtk.vfs.*'
 add-extensions:
   org.mozilla.Firefox.Plugin:
+    add-ld-path: lib
     directory: firefox/plugins
     merge-dirs: plugins
     subdirectories: true

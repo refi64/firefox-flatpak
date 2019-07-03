@@ -1,11 +1,17 @@
 app-id: org.mozilla.Firefox.Plugin.Flash
 runtime: org.mozilla.Firefox
-# We don't actually need anything sdk-specific, so keep things simple.
-sdk: org.freedesktop.Platform//18.08
+sdk: org.freedesktop.Sdk//18.08
 build-extension: true
 finish-args:
   - '--require-version=1.5.0'
+build-options:
+  prefix: /app/firefox/plugins/Flash
+  append-path: /app/firefox/plugins/Flash/bin
+  append-ld-library-path: /app/firefox/plugins/Flash/lib
+  append-pkg-config-path: /app/firefox/plugins/Flash/lib/pkgconfig
 modules:
+  - ../shared-modules/gtk2/gtk2.json
+
   - name: flash
     buildsystem: simple
     build-commands:
