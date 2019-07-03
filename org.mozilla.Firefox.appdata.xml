@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="desktop">
-  <id>org.mozilla.Firefox.desktop</id>
+  <id>org.mozilla.Firefox</id>
+  <launchable type="desktop-id">org.mozilla.Firefox.desktop</launchable>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>MPL-2.0</project_license>
-
-  <categories>
-    <category>Utility</category>
-  </categories>
 
   <name>Firefox</name>
   <name xml:lang="ar">فايرفوكس</name>
@@ -22,7 +19,7 @@
   <name xml:lang="zh_CN">Firefox</name>
   <name xml:lang="zh_TW">Firefox</name>
 
-  <summary>Mozilla's popular web browser</summary>
+  <summary>Firefox Web Browser</summary>
   <summary xml:lang="ar">متصفح ويب موزيلا الشهير</summary>
   <summary xml:lang="es">El navegador popular de Mozilla</summary>
   <summary xml:lang="fr">Fameux navigateur web de Mozilla</summary>
@@ -49,9 +46,9 @@
   <description xml:lang="zh_TW"><p>Firefox 是世界上最熱門的網頁瀏覽器之一。若您在瀏覽需要 Java 支援的網站時遇到問題，就試試 Firefox 吧。** 需要網路</p></description>
 
   <screenshots>
-    <screenshot type="default">
-      <image>https://d3lapyynmdp1i9.cloudfront.net/screenshots/org.mozilla.Firefox/C/org.mozilla.firefox-screenshot1.jpg</image>
-    </screenshot>
+    <screenshot type="default">https://raw.githubusercontent.com/hughsie/fedora-appstream/master/screenshots-extra/firefox/a.png</screenshot>
+    <screenshot>https://raw.githubusercontent.com/hughsie/fedora-appstream/master/screenshots-extra/firefox/b.png</screenshot>
+    <screenshot>https://raw.githubusercontent.com/hughsie/fedora-appstream/master/screenshots-extra/firefox/c.png</screenshot>
   </screenshots>
 
   <metadata>
@@ -65,7 +62,11 @@
   </content_rating>
 
   <developer_name>The Mozilla Foundation</developer_name>
-  <url type="homepage">https://www.mozilla.org/</url>
-  <url type="bugtracker">https://bugzilla.mozilla.org/describecomponents.cgi?product=Firefox</url>
+
+  <url type="homepage">https://www.mozilla.org/firefox/</url>
+  <url type="donation">https://donate.mozilla.org/</url>
+  <url type="bugtracker">https://bugzilla.mozilla.org/</url>
+  <url type="help">https://support.mozilla.org/</url>
+  <url type="translate">https://wiki.mozilla.org/L10n:Starting_a_localization</url>
   <url type="help">https://support.mozilla.org/en-US/kb/get-started-firefox-overview-main-features</url>
 </component>

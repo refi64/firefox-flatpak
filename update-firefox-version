@@ -22,36 +22,75 @@
 # with this program; if not, write to the Free Software Foundation, Inc.,
 # 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
-try:
-    from bs4 import BeautifulSoup
-except ImportError:
-    print('Please install BeautifulSoup! (e.g., `sudo pip3 install bs4`)')
-    exit(1)
+from html.parser import HTMLParser
 
-from collections import OrderedDict
+import collections
 import hashlib
 import json
-import logging
 import os
+import os.path
+import sys
 import urllib.error
-import urllib.parse
 import urllib.request
 
-CURRENT_VERSION = '52.6.0esr'
 
-class FirefoxJsonGenerator():
-    JSON_FILE_NAME = 'org.mozilla.Firefox.json.in'
-    MOZILLA_ARCHIVE_URL = 'https://archive.mozilla.org/pub/firefox/releases/{version}/linux-x86_64/'
+CURRENT_VERSION = '60.7.1esr'
+
+
+ExtraDataInfo = collections.namedtuple('ExtraDataInfo', ['filename', 'url', 'sha256', 'size'])
+
+
+def extra_data_info_encode(obj):
+    return dict(type='extra-data', **obj._asdict())
+
+
+class XpiPageParser(HTMLParser):
+    def __init__(self):
+        super(XpiPageParser, self).__init__()
+        self.files = []
+
+    def handle_starttag(self, tag, attrs):
+        attr_dict = dict(attrs)
+        if tag == 'a':
+            href = attr_dict.get('href', '')
+            if href.endswith('.xpi'):
+                self.files.append(os.path.basename(href))
+
+    @staticmethod
+    def find_xpi_files(html):
+        parser = XpiPageParser()
+        parser.feed(html)
+        return parser.files
+
+
+class FirefoxJsonGenerator:
+    JSON_FILE_NAME = 'firefox-sources.json'
+    MOZILLA_ARCHIVE_URL = 'https://archive.mozilla.org/pub/firefox/releases/{version}/'
+    MOZILLA_PLATFORM = 'linux-x86_64'
+    MOZILLA_PLATFORM_URL = '{}{}/'.format(MOZILLA_ARCHIVE_URL, MOZILLA_PLATFORM)
 
     def __init__(self, version):
-        logging.basicConfig(level=logging.INFO)
         self._version = version
-        self._json_data = None
         self._versioned_url = self.MOZILLA_ARCHIVE_URL.format(version=self._version)
+        self._versioned_platform_url = self.MOZILLA_PLATFORM_URL.format(version=self._version)
+        self._sha256 = {}
 
-        with open(self.JSON_FILE_NAME) as json_file:
-            self._json_data = json.load(json_file, object_pairs_hook=OrderedDict)
-            self._json_data['finish-args'] = [arg for arg in self._json_data.get('finish-args', []) if not arg.startswith('--extra-data=')]
+    def _load_sha256(self):
+        '''Built a table of downloadable files and their SHA256 digests.'''
+        url = '{}SHA256SUMS'.format(self._versioned_url)
+        with urllib.request.urlopen(url) as response:
+            sha256_table = response.read().decode()
+
+        for line in sha256_table.splitlines():
+            assert line.count('  ') == 1, line
+            digest, filename = line.split('  ')
+
+            if filename.startswith(self.MOZILLA_PLATFORM):
+                assert filename.count('/') == 2, filename
+                _, dirname, filename = filename.split('/')
+
+                if dirname == 'en-US' or dirname == 'xpi':
+                    self._sha256[filename] = digest
 
     def _get_extra_data_info(self, url):
         '''Fetches the extra data info for the given URL
@@ -60,85 +99,52 @@ class FirefoxJsonGenerator():
         This is needed together with the URL and name of the asset for
         the Flatpak json manifest.
         '''
-        info = {}
-        request = urllib.request.Request(url)
 
         print('Fetching info for "{}"'.format(url))
 
-        try:
-            with urllib.request.urlopen(request) as response:
-                print('Loading')
-                contents = b''
-                size=int(response.getheader('Content-Length'))
-                while not response.closed:
-                    data = response.read(250000)
-                    if len(data) == 0:
-                        break
+        filename = os.path.basename(urllib.parse.urlparse(url).path)
+        assert filename in self._sha256, filename
+        sha256 = self._sha256[filename]
 
-                    contents += data
-                    progress_str = '{}/{} KB'.format(int(len(contents) / 1000),
-                                                     int(size / 1000))
-                    print('{:>20}\r'.format(progress_str), end='', flush=True)
+        with urllib.request.urlopen(url) as response:
+            size = int(response.getheader('Content-Length'))
 
-                print('\n........ done')
-                info['sha256sum'] = hashlib.sha256(contents).hexdigest()
-                info['url'] = request.get_full_url()
-                info['name'] = os.path.basename(request.get_full_url())
-                info['size'] = len(contents)
-
-                return info
-        except urllib.error.HTTPError as error:
-            logging.error('{}: {}'.format(url, error.msg))
-            exit(1)
+        return ExtraDataInfo(filename=filename, url=url, sha256=sha256, size=size)
 
     def _fetch_firefox_info(self):
-        '''Fetches the info for this Firefox version'''
-        url = '{url}en-US/firefox-{version}.tar.bz2'.format(url=self._versioned_url,
+        '''Fetches the info for this Firefox version.'''
+        url = '{url}en-US/firefox-{version}.tar.bz2'.format(url=self._versioned_platform_url,
                                                             version=self._version)
-        info = self._get_extra_data_info(url)
-        info['name'] = 'firefox.tar.bz2'
-        return info
+        return self._get_extra_data_info(url)
 
     def _fetch_languages_info(self):
         '''Fetches the info for all the languages add-ons in this Firefox version.'''
-        url = '{url}xpi/'.format(url=self._versioned_url)
-        request = urllib.request.Request(url)
+        index_url = '{url}xpi/'.format(url=self._versioned_platform_url)
         languages_html = None
-
-        try:
-            with urllib.request.urlopen(request) as response:
-                languages_html = str(response.read())
-        except urllib.error.HTTPError as error:
-            logging.error('{}: {}'.format(url, error.msg))
-            exit(1)
-
-        languages = []
-        soup = BeautifulSoup(languages_html, 'html.parser')
-
-        for link in soup.find_all('a'):
-            if not link.string.endswith('.xpi') or not 'href' in link.attrs:
-                continue
-            lang_link = link.get('href')
-            # Make sure we add the full URL for the language add-ons
-            languages.append(urllib.parse.urljoin(url, lang_link))
-
         info = []
-        for lang in languages:
-            info.append(self._get_extra_data_info(lang))
+
+        with urllib.request.urlopen(index_url) as response:
+            xpi_html = response.read().decode()
+
+        for xpi in XpiPageParser.find_xpi_files(xpi_html):
+            xpi_url = index_url + xpi
+            info.append(self._get_extra_data_info(xpi_url))
+
         return info
 
     def generate(self):
         '''
-        Generate the json file from json.in adding the extra-data for Firefox
-        and its languages.
+        Generate the firefox-sources.json file adding the extra-data for Firefox and its
+        languages.
         '''
+
+        self._load_sha256()
+
         extra_data_info = [self._fetch_firefox_info()] + self._fetch_languages_info()
-        finish_args = self._json_data.get('finish-args', [])
-        for info in extra_data_info:
-            finish_args.append('--extra-data={name}:{sha256sum}:{size}::{url}'.format(**info))
+
         with open(self.JSON_FILE_NAME, 'w') as f:
-            f.write(json.dumps(self._json_data, indent=2))
-            f.write("\n")
+            json.dump(list(map(extra_data_info_encode, extra_data_info)), f, indent=2)
+            f.write('\n')
 
 if __name__ == '__main__':
     generator = FirefoxJsonGenerator(CURRENT_VERSION)

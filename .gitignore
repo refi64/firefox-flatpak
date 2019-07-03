@@ -1,5 +1,5 @@
-persist/
 .flatpak-builder/
+_build/
 repo/
-tmp/
 *gpg
+firefox.flatpakref

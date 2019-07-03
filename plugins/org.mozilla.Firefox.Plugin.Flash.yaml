@@ -1,0 +1,33 @@
+app-id: org.mozilla.Firefox.Plugin.Flash
+runtime: org.mozilla.Firefox
+# We don't actually need anything sdk-specific, so keep things simple.
+sdk: org.freedesktop.Platform//18.08
+build-extension: true
+finish-args:
+  - '--require-version=1.5.0'
+modules:
+  - name: flash
+    buildsystem: simple
+    build-commands:
+      - 'install -Dm 755 -t ${FLATPAK_DEST}/bin apply_extra'
+      - 'mkdir -p ${FLATPAK_DEST}/plugins'
+      - 'ln -s ${FLATPAK_DEST}/extra/libflashplayer.so ${FLATPAK_DEST}/plugins'
+    sources:
+      - type: script
+        dest-filename: apply_extra
+        commands:
+          - 'tar xf flash_player_npapi_linux.tar.gz libflashplayer.so'
+          - 'rm flash_player_npapi_linux.tar.gz'
+          - 'chmod +x libflashplayer.so'
+      - type: extra-data
+        filename: flash_player_npapi_linux.tar.gz
+        only-arches: [x86_64]
+        url: https://fpdownload.adobe.com/pub/flashplayer/pdc/32.0.0.207/flash_player_npapi_linux.x86_64.tar.gz
+        sha256: fe7a475c71b58177998cc619ed2c977a7a596a39751b2ca8c6576ded76312cf8
+        size: 9052823
+      - type: extra-data
+        filename: flash_player_npapi_linux.tar.gz
+        only-arches: [i386]
+        url: https://fpdownload.adobe.com/pub/flashplayer/pdc/32.0.0.207/flash_player_npapi_linux.i386.tar.gz
+        sha256: dee1fdbf3077c8cf7ac367ef4cffe436a1440f04245d8482e91150225c553ac1
+        size: 8537551
