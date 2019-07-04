@@ -1,4 +1,3 @@
 [submodule "shared-modules"]
 	path = shared-modules
-	url = https://github.com/refi64/shared-modules
-    branch = gtk2-flatpak-dest
+	url = https://github.com/flathub/shared-modules
