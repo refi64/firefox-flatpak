@@ -22,7 +22,7 @@
 DEST_DIR=${XDG_DATA_HOME}/firefox-plugins
 FLASH_DIR=${DEST_DIR}/flash
 PLUGINS_DIR=~/.mozilla/plugins
-WGET_COMMAND="wget -c --tries=5"
+CURL_COMMAND="curl -L --retry 5"
 CACHE_DIR=${XDG_CACHE_HOME}
 DAYS_CHECK=7
 
@@ -32,7 +32,7 @@ exit_with_error() {
 }
 
 # Data needed for the Flash plugin, from Adobe
-FLASH_LKGV_FILE_URL="https://s3-us-west-2.amazonaws.com/abacadaba/flashplugin-$(arch).lkgv"
+FLASH_LKGV_FILE_URL="https://s3-us-west-2.amazonaws.com/abacadaba/flashplugin-$(uname -m).lkgv"
 FLASH_LKGV_VERSION=
 FLASH_LKGV_URL=
 FLASH_LKGV_SHA256SUM=
@@ -50,7 +50,7 @@ recreate_dir() {
 
 fetch_flash_metadata() {
     local filename=$(basename ${FLASH_LKGV_FILE_URL})
-    if ${WGET_COMMAND} "${FLASH_LKGV_FILE_URL}" -O "${FLASH_CACHE_DIR}/${filename}"; then
+    if ${CURL_COMMAND} "${FLASH_LKGV_FILE_URL}" -o "${FLASH_CACHE_DIR}/${filename}"; then
         while IFS='=' read key value; do
             case "$key" in
                 "NPAPI_VERSION") FLASH_LKGV_VERSION="$value" ;;
@@ -145,7 +145,7 @@ flash_should_update() {
 download_flash() {
     # Get the Adobe Flash Plugin
     echo "Downloading ${FLASH_LKGV_FILENAME}"
-    if ! ${WGET_COMMAND} "${FLASH_LKGV_URL}" -O "${FLASH_CACHE_DIR}/${FLASH_LKGV_FILENAME}"; then
+    if ! ${CURL_COMMAND} "${FLASH_LKGV_URL}" -o "${FLASH_CACHE_DIR}/${FLASH_LKGV_FILENAME}"; then
         echo "Failed to download ${FLASH_LKGV_URL}"
         return 1
     fi

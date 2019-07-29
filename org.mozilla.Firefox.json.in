@@ -1,8 +1,8 @@
 {
   "app-id": "org.mozilla.Firefox",
-  "runtime": "com.endlessm.Platform",
-  "runtime-version": "@BRANCH@",
-  "sdk": "com.endlessm.Sdk",
+  "runtime": "org.freedesktop.Platform",
+  "runtime-version": "18.08",
+  "sdk": "org.freedesktop.Sdk",
   "command": "firefox",
   "separate-locales": false,
   "finish-args": [
@@ -110,6 +110,7 @@
     "--extra-data=zh-TW.xpi:63ea5dee6df00d76b4dc8f162cbffcf26b632bfb5cec8d43543e815ba864d141:470063::https://archive.mozilla.org/pub/firefox/releases/52.6.0esr/linux-x86_64/xpi/zh-TW.xpi"
   ],
   "modules": [
+    "shared-modules/gtk2/gtk2.json",
     {
       "name": "unzip",
       "no-autogen": true,
