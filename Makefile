@@ -25,10 +25,10 @@ release: org.mozilla.Firefox.yaml | release-repo
 	$(call ensure_config_var_set,RELEASE_GPG_KEY)
 	$(MAKE) _manifest arg_manifest=$< arg_release=1
 
-test-plugin-%: plugins/org.mozilla.Firefox.Plugin.%.yaml
+test-flash: flash/com.adobe.FlashPlayer.NPAPI.yaml
 	$(MAKE) _manifest arg_manifest=$<
 
-release-plugin-%: plugins/org.mozilla.Firefox.Plugin.%.yaml
+release-flash: flash/com.adobe.FlashPlayer.NPAPI.yaml
 	$(MAKE) _manifest arg_manifest=$< arg_release=1
 
 test-plugins: test-plugin-Flash

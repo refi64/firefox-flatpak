@@ -26,12 +26,10 @@ finish-args:
   - '--talk-name=org.freedesktop.ScreenSaver'
   - '--talk-name=org.gtk.vfs.*'
 add-extensions:
-  org.mozilla.Firefox.Plugin:
+  com.adobe.FlashPlayer.NPAPI:
     add-ld-path: lib
-    directory: firefox/plugins
-    merge-dirs: plugins
-    subdirectories: true
-    no-autodownload: true
+    directory: firefox/flash
+    autodelete: true
 modules:
   - name: dbus-glib
     cleanup:
@@ -52,7 +50,8 @@ modules:
   - name: firefox
     buildsystem: simple
     build-commands:
-      - 'install -d /app/firefox/plugins'
+      - 'mkdir -p /app/firefox/flash'
+      - 'ln -s /app/firefox/flash/plugins /app/firefox/plugins'
 
       - 'install -Dm 755 apply_extra.sh /app/bin/apply_extra'
       - 'install -Dm 755 firefox.sh /app/bin/firefox'

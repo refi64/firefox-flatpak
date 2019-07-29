@@ -3,7 +3,7 @@
 tar xf firefox-*.tar.bz2
 rm firefox-*.tar.bz2
 
-ln -s /app/firefox/plugins/plugins firefox/browser
+ln -s /app/firefox/plugins firefox/browser
 mkdir -p firefox/{distribution/extensions,browser/defaults/preferences}
 ln -s /app/firefox/data/distribution.ini firefox/distribution
 ln -s /app/firefox/data/endless-default-prefs.js firefox/browser/defaults/preferences
