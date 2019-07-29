@@ -1,0 +1,653 @@
+[
+  {
+    "type": "extra-data",
+    "filename": "firefox-52.6.0esr.tar.bz2",
+    "url": "https://archive.mozilla.org/pub/firefox/releases/52.6.0esr/linux-x86_64/en-US/firefox-52.6.0esr.tar.bz2",
+    "sha256": "11db6568646454100fdff9bf03a906af09f4fb1aaf755064bfc093e88a4aee3b",
+    "size": 57694140
+  },
+  {
+    "type": "extra-data",
+    "filename": "ach.xpi",
+    "url": "https://archive.mozilla.org/pub/firefox/releases/52.6.0esr/linux-x86_64/xpi/ach.xpi",
+    "sha256": "4b197c239630ba52f6fd7a3f4194d22c36f5f8cadca2d6bba282425bfff25f04",
+    "size": 427641
+  },
+  {
+    "type": "extra-data",
+    "filename": "af.xpi",
+    "url": "https://archive.mozilla.org/pub/firefox/releases/52.6.0esr/linux-x86_64/xpi/af.xpi",
+    "sha256": "c47f219a45b378bd52865f2370a0088645a9c585893c16ec98823b2a42628539",
+    "size": 436823
+  },
+  {
+    "type": "extra-data",
+    "filename": "an.xpi",
+    "url": "https://archive.mozilla.org/pub/firefox/releases/52.6.0esr/linux-x86_64/xpi/an.xpi",
+    "sha256": "04c9e0c44264203177c9551ea4bd86175968d8333c5d9632bf094d791eb526f7",
+    "size": 445142
+  },
+  {
+    "type": "extra-data",
+    "filename": "ar.xpi",
+    "url": "https://archive.mozilla.org/pub/firefox/releases/52.6.0esr/linux-x86_64/xpi/ar.xpi",
+    "sha256": "2e7743c7b53a54c3ff2e4abe0e8547137793d18689e67f81574253362e33450d",
+    "size": 473382
+  },
+  {
+    "type": "extra-data",
+    "filename": "as.xpi",
+    "url": "https://archive.mozilla.org/pub/firefox/releases/52.6.0esr/linux-x86_64/xpi/as.xpi",
+    "sha256": "744f3f938434fe6634f7e0002fed1663a506741232e9ed35a7252e59b5155d71",
+    "size": 486888
+  },
+  {
+    "type": "extra-data",
+    "filename": "ast.xpi",
+    "url": "https://archive.mozilla.org/pub/firefox/releases/52.6.0esr/linux-x86_64/xpi/ast.xpi",
+    "sha256": "abc3c18ad1fec3d83ade6a9212648e0e0dcc372c1da91063c615bdb51d6f50fb",
+    "size": 440034
+  },
+  {
+    "type": "extra-data",
+    "filename": "az.xpi",
+    "url": "https://archive.mozilla.org/pub/firefox/releases/52.6.0esr/linux-x86_64/xpi/az.xpi",
+    "sha256": "ffd71f93a691a4840d276175cfe7e7236511b88ed214cd9a3c8e977d5e37c18b",
+    "size": 454922
+  },
+  {
+    "type": "extra-data",
+    "filename": "bg.xpi",
+    "url": "https://archive.mozilla.org/pub/firefox/releases/52.6.0esr/linux-x86_64/xpi/bg.xpi",
+    "sha256": "1ea1d1cc23e9a0c17e37ee5684d0b3f924fa3932648ae00f09484ed170bed9d3",
+    "size": 487892
+  },
+  {
+    "type": "extra-data",
+    "filename": "bn-BD.xpi",
+    "url": "https://archive.mozilla.org/pub/firefox/releases/52.6.0esr/linux-x86_64/xpi/bn-BD.xpi",
+    "sha256": "332233b2e423458d991e3c92986bec697a0ead26e2f21ca8d02060caa3d6cf02",
+    "size": 511994
+  },
+  {
+    "type": "extra-data",
+    "filename": "bn-IN.xpi",
+    "url": "https://archive.mozilla.org/pub/firefox/releases/52.6.0esr/linux-x86_64/xpi/bn-IN.xpi",
+    "sha256": "3ca382fd2b4790e1be13b2dfd230551464233233a34a6ecdbf72a372a9c52182",
+    "size": 509375
+  },
+  {
+    "type": "extra-data",
+    "filename": "br.xpi",
+    "url": "https://archive.mozilla.org/pub/firefox/releases/52.6.0esr/linux-x86_64/xpi/br.xpi",
+    "sha256": "7d995cd94773a6d2f245d8286646c727bce18e321eabd055d7ed83abb31fceda",
+    "size": 435485
+  },
+  {
+    "type": "extra-data",
+    "filename": "bs.xpi",
+    "url": "https://archive.mozilla.org/pub/firefox/releases/52.6.0esr/linux-x86_64/xpi/bs.xpi",
+    "sha256": "7bbda66eb47460160c9737783d568509563674f58f4454826878e3238af2d816",
+    "size": 441782
+  },
+  {
+    "type": "extra-data",
+    "filename": "ca.xpi",
+    "url": "https://archive.mozilla.org/pub/firefox/releases/52.6.0esr/linux-x86_64/xpi/ca.xpi",
+    "sha256": "95d1332ea89c16cf3c81c1aad628b2a55d67ee02e243b1468d8d1c1cb6b8dc68",
+    "size": 443304
+  },
+  {
+    "type": "extra-data",
+    "filename": "cak.xpi",
+    "url": "https://archive.mozilla.org/pub/firefox/releases/52.6.0esr/linux-x86_64/xpi/cak.xpi",
+    "sha256": "cf9503cbb4f324e71e3b262da99490b3474e864dfe9fcd1c469dcdf86baded1e",
+    "size": 459184
+  },
+  {
+    "type": "extra-data",
+    "filename": "cs.xpi",
+    "url": "https://archive.mozilla.org/pub/firefox/releases/52.6.0esr/linux-x86_64/xpi/cs.xpi",
+    "sha256": "be60abee346577ee59594b99c0eaa51f7667a53c16909bd0eb719c7e9656697a",
+    "size": 444075
+  },
+  {
+    "type": "extra-data",
+    "filename": "cy.xpi",
+    "url": "https://archive.mozilla.org/pub/firefox/releases/52.6.0esr/linux-x86_64/xpi/cy.xpi",
+    "sha256": "5e0cf99bd8ac3004b14a24d64d759a22b521cd6bc8a5fdebdc659c0144f8c2a1",
+    "size": 436582
+  },
+  {
+    "type": "extra-data",
+    "filename": "da.xpi",
+    "url": "https://archive.mozilla.org/pub/firefox/releases/52.6.0esr/linux-x86_64/xpi/da.xpi",
+    "sha256": "f1702f7ac73c00287dafd258cf124bcfa4eee50078ed5b46d58f7f49391cbbe4",
+    "size": 424394
+  },
+  {
+    "type": "extra-data",
+    "filename": "de.xpi",
+    "url": "https://archive.mozilla.org/pub/firefox/releases/52.6.0esr/linux-x86_64/xpi/de.xpi",
+    "sha256": "97a7ca971843fe36a4b89814be7b0d57473d991f49d6ab3305778c193ad86318",
+    "size": 442478
+  },
+  {
+    "type": "extra-data",
+    "filename": "dsb.xpi",
+    "url": "https://archive.mozilla.org/pub/firefox/releases/52.6.0esr/linux-x86_64/xpi/dsb.xpi",
+    "sha256": "959fab516d9ec3741de776499ea9e43680abca3937ec9d60c7d89b4799ce9962",
+    "size": 459425
+  },
+  {
+    "type": "extra-data",
+    "filename": "el.xpi",
+    "url": "https://archive.mozilla.org/pub/firefox/releases/52.6.0esr/linux-x86_64/xpi/el.xpi",
+    "sha256": "c0c1ff736897969a742aa66d37364b13dbbcf2aa6ed5e025c60c782490da620d",
+    "size": 516592
+  },
+  {
+    "type": "extra-data",
+    "filename": "en-GB.xpi",
+    "url": "https://archive.mozilla.org/pub/firefox/releases/52.6.0esr/linux-x86_64/xpi/en-GB.xpi",
+    "sha256": "e76bb6e58169bc314973e9a187ef855e04bce17188deef105d7296854af58e67",
+    "size": 419324
+  },
+  {
+    "type": "extra-data",
+    "filename": "en-US.xpi",
+    "url": "https://archive.mozilla.org/pub/firefox/releases/52.6.0esr/linux-x86_64/xpi/en-US.xpi",
+    "sha256": "88cbf2ceb7930777a23fc6c438a2e784e9be11e4adf1d81f620ea71d91e3051f",
+    "size": 428655
+  },
+  {
+    "type": "extra-data",
+    "filename": "en-ZA.xpi",
+    "url": "https://archive.mozilla.org/pub/firefox/releases/52.6.0esr/linux-x86_64/xpi/en-ZA.xpi",
+    "sha256": "9a7e227b3baa8ec5eff633a54712cdf4d7bb54035e36eb62bcdf3248ff35ec45",
+    "size": 412212
+  },
+  {
+    "type": "extra-data",
+    "filename": "eo.xpi",
+    "url": "https://archive.mozilla.org/pub/firefox/releases/52.6.0esr/linux-x86_64/xpi/eo.xpi",
+    "sha256": "7b76939860c3645eae536cc0bc53b328db37eac2158baf73e0c88b9c8930fd29",
+    "size": 437474
+  },
+  {
+    "type": "extra-data",
+    "filename": "es-AR.xpi",
+    "url": "https://archive.mozilla.org/pub/firefox/releases/52.6.0esr/linux-x86_64/xpi/es-AR.xpi",
+    "sha256": "15b0eaf0fecc503992d8f6bd6458c69250a23515d6ba3986d02cb96518f24f5c",
+    "size": 445926
+  },
+  {
+    "type": "extra-data",
+    "filename": "es-CL.xpi",
+    "url": "https://archive.mozilla.org/pub/firefox/releases/52.6.0esr/linux-x86_64/xpi/es-CL.xpi",
+    "sha256": "87b9a1c5bdd5efa062c49fa540cd694840d44f984c2fac399280a45e3c5f7a92",
+    "size": 445677
+  },
+  {
+    "type": "extra-data",
+    "filename": "es-ES.xpi",
+    "url": "https://archive.mozilla.org/pub/firefox/releases/52.6.0esr/linux-x86_64/xpi/es-ES.xpi",
+    "sha256": "d585192fbf6146ff80dbee811234e7881544dd4364439e212391a8430a2baeac",
+    "size": 344876
+  },
+  {
+    "type": "extra-data",
+    "filename": "es-MX.xpi",
+    "url": "https://archive.mozilla.org/pub/firefox/releases/52.6.0esr/linux-x86_64/xpi/es-MX.xpi",
+    "sha256": "8d14a19a37f28aebf5d4f85a65eaece5ccb7405d9cdfd44f5b7ee787bab73fad",
+    "size": 448385
+  },
+  {
+    "type": "extra-data",
+    "filename": "et.xpi",
+    "url": "https://archive.mozilla.org/pub/firefox/releases/52.6.0esr/linux-x86_64/xpi/et.xpi",
+    "sha256": "9beb6c763c1ecd2c072849aa7ee19df5b6f82bbd8d262ca40c3335501a7ffece",
+    "size": 425112
+  },
+  {
+    "type": "extra-data",
+    "filename": "eu.xpi",
+    "url": "https://archive.mozilla.org/pub/firefox/releases/52.6.0esr/linux-x86_64/xpi/eu.xpi",
+    "sha256": "4c3fea04a79ea11b3702567631725de0ae4157e1783992761910fc78bfd8499b",
+    "size": 438479
+  },
+  {
+    "type": "extra-data",
+    "filename": "fa.xpi",
+    "url": "https://archive.mozilla.org/pub/firefox/releases/52.6.0esr/linux-x86_64/xpi/fa.xpi",
+    "sha256": "30a5b0794571a1eb3097e6e7cbfc886091b3567f85fb81901ed3e81ac8b9a212",
+    "size": 491344
+  },
+  {
+    "type": "extra-data",
+    "filename": "ff.xpi",
+    "url": "https://archive.mozilla.org/pub/firefox/releases/52.6.0esr/linux-x86_64/xpi/ff.xpi",
+    "sha256": "1051d4e16b4331942c400dfeb2bbf1f6cbd88a37decffc989ea5f433dd1a94b2",
+    "size": 440928
+  },
+  {
+    "type": "extra-data",
+    "filename": "fi.xpi",
+    "url": "https://archive.mozilla.org/pub/firefox/releases/52.6.0esr/linux-x86_64/xpi/fi.xpi",
+    "sha256": "e85c1c0da3e03931d7a252bd66e49cf55572cd8781b917d371d856270520acfe",
+    "size": 430060
+  },
+  {
+    "type": "extra-data",
+    "filename": "fr.xpi",
+    "url": "https://archive.mozilla.org/pub/firefox/releases/52.6.0esr/linux-x86_64/xpi/fr.xpi",
+    "sha256": "58250967343dd14fd49c74e99022e7b6133c1eb19d48f279a0445a6832251715",
+    "size": 450210
+  },
+  {
+    "type": "extra-data",
+    "filename": "fy-NL.xpi",
+    "url": "https://archive.mozilla.org/pub/firefox/releases/52.6.0esr/linux-x86_64/xpi/fy-NL.xpi",
+    "sha256": "9fd6f46d915ba369a23aa0ee9a0a722ed91f7251a2a8196e59ea0e54ba0816cb",
+    "size": 444970
+  },
+  {
+    "type": "extra-data",
+    "filename": "ga-IE.xpi",
+    "url": "https://archive.mozilla.org/pub/firefox/releases/52.6.0esr/linux-x86_64/xpi/ga-IE.xpi",
+    "sha256": "b465394bd6ce36f4d0a3d98530e14cdf1b86eba49244fe9f48e7afb7814342b0",
+    "size": 458165
+  },
+  {
+    "type": "extra-data",
+    "filename": "gd.xpi",
+    "url": "https://archive.mozilla.org/pub/firefox/releases/52.6.0esr/linux-x86_64/xpi/gd.xpi",
+    "sha256": "f42dfac5b086d9b64900b03e0d15c477fbb35bc9c488d0193038d87ee9e1be2f",
+    "size": 447268
+  },
+  {
+    "type": "extra-data",
+    "filename": "gl.xpi",
+    "url": "https://archive.mozilla.org/pub/firefox/releases/52.6.0esr/linux-x86_64/xpi/gl.xpi",
+    "sha256": "f3a197431b39db28365047d96edbb366849adb777443a8578e40d2df4a4faf7c",
+    "size": 447294
+  },
+  {
+    "type": "extra-data",
+    "filename": "gn.xpi",
+    "url": "https://archive.mozilla.org/pub/firefox/releases/52.6.0esr/linux-x86_64/xpi/gn.xpi",
+    "sha256": "6f4408ce7e57db41f226fb9eaf7a41e7a7a09b45fcd65746832085372ec9a0bb",
+    "size": 456214
+  },
+  {
+    "type": "extra-data",
+    "filename": "gu-IN.xpi",
+    "url": "https://archive.mozilla.org/pub/firefox/releases/52.6.0esr/linux-x86_64/xpi/gu-IN.xpi",
+    "sha256": "bb7d1179a7ba99fd8d4359eb4496aab521682d1fa72e1c21d43fdda3f81052f0",
+    "size": 489366
+  },
+  {
+    "type": "extra-data",
+    "filename": "he.xpi",
+    "url": "https://archive.mozilla.org/pub/firefox/releases/52.6.0esr/linux-x86_64/xpi/he.xpi",
+    "sha256": "d62d4331af922f3990201e0bf35b3e17ed738b03ade6271a579a29ed067b7f9b",
+    "size": 455282
+  },
+  {
+    "type": "extra-data",
+    "filename": "hi-IN.xpi",
+    "url": "https://archive.mozilla.org/pub/firefox/releases/52.6.0esr/linux-x86_64/xpi/hi-IN.xpi",
+    "sha256": "52b1973c2bd549afc9df7dd8041a3ae2688c583c16b325f821fdf982592a89b5",
+    "size": 506519
+  },
+  {
+    "type": "extra-data",
+    "filename": "hr.xpi",
+    "url": "https://archive.mozilla.org/pub/firefox/releases/52.6.0esr/linux-x86_64/xpi/hr.xpi",
+    "sha256": "6ca91246b8da69db232cf2f5db62f8d7a56c5d77cf6db07558bf20f6d0d839f3",
+    "size": 447503
+  },
+  {
+    "type": "extra-data",
+    "filename": "hsb.xpi",
+    "url": "https://archive.mozilla.org/pub/firefox/releases/52.6.0esr/linux-x86_64/xpi/hsb.xpi",
+    "sha256": "8d3aea75969b1cf5c96846c5187c6d28a01e85998c016f931f9ea7f7a8791b74",
+    "size": 457259
+  },
+  {
+    "type": "extra-data",
+    "filename": "hu.xpi",
+    "url": "https://archive.mozilla.org/pub/firefox/releases/52.6.0esr/linux-x86_64/xpi/hu.xpi",
+    "sha256": "5c7899bd5d61779c8c3aa1b333daa92b444e5c9b0ad9cf752d12f054dad4526a",
+    "size": 451496
+  },
+  {
+    "type": "extra-data",
+    "filename": "hy-AM.xpi",
+    "url": "https://archive.mozilla.org/pub/firefox/releases/52.6.0esr/linux-x86_64/xpi/hy-AM.xpi",
+    "sha256": "f8ae9ed41cd18da29e9f292bbc16ffff3897b39695aa7fd358f8eed675209648",
+    "size": 495773
+  },
+  {
+    "type": "extra-data",
+    "filename": "id.xpi",
+    "url": "https://archive.mozilla.org/pub/firefox/releases/52.6.0esr/linux-x86_64/xpi/id.xpi",
+    "sha256": "965bd28a58985669bfa0756ba06ee4060eb02cbdc22fde7fec081c3804f38b05",
+    "size": 426023
+  },
+  {
+    "type": "extra-data",
+    "filename": "is.xpi",
+    "url": "https://archive.mozilla.org/pub/firefox/releases/52.6.0esr/linux-x86_64/xpi/is.xpi",
+    "sha256": "0bf1d078bf48bac49727840b4de7a112005d0899bef44eff12ac8586be320a94",
+    "size": 442693
+  },
+  {
+    "type": "extra-data",
+    "filename": "it.xpi",
+    "url": "https://archive.mozilla.org/pub/firefox/releases/52.6.0esr/linux-x86_64/xpi/it.xpi",
+    "sha256": "c1be99d0c382785ec09da2e95eab81efc6ad66fbb73985b4b00b97a41a039ac6",
+    "size": 339221
+  },
+  {
+    "type": "extra-data",
+    "filename": "ja.xpi",
+    "url": "https://archive.mozilla.org/pub/firefox/releases/52.6.0esr/linux-x86_64/xpi/ja.xpi",
+    "sha256": "30bde34762cad39c8904bc408deaba1acf1bc55274d366960fe0f91e110270da",
+    "size": 488343
+  },
+  {
+    "type": "extra-data",
+    "filename": "ka.xpi",
+    "url": "https://archive.mozilla.org/pub/firefox/releases/52.6.0esr/linux-x86_64/xpi/ka.xpi",
+    "sha256": "9887d3f5650fd28ee8dfa010d9937e714dd587d60e11e66ba8c3d439d30295d7",
+    "size": 475375
+  },
+  {
+    "type": "extra-data",
+    "filename": "kab.xpi",
+    "url": "https://archive.mozilla.org/pub/firefox/releases/52.6.0esr/linux-x86_64/xpi/kab.xpi",
+    "sha256": "ffad5781f6d4ed8426ffaa400996ff9dd16b9a7e2eb7ff67e282d14e0777d98c",
+    "size": 444520
+  },
+  {
+    "type": "extra-data",
+    "filename": "kk.xpi",
+    "url": "https://archive.mozilla.org/pub/firefox/releases/52.6.0esr/linux-x86_64/xpi/kk.xpi",
+    "sha256": "366359b30331e4c90528e3fea85ce315b06fbd053a2ddb1ad7a19bfb3afe8e29",
+    "size": 496940
+  },
+  {
+    "type": "extra-data",
+    "filename": "km.xpi",
+    "url": "https://archive.mozilla.org/pub/firefox/releases/52.6.0esr/linux-x86_64/xpi/km.xpi",
+    "sha256": "7ac59476de19454258da359c069a6b45377acdab0d3bf0302c4c62c5f657550f",
+    "size": 520344
+  },
+  {
+    "type": "extra-data",
+    "filename": "kn.xpi",
+    "url": "https://archive.mozilla.org/pub/firefox/releases/52.6.0esr/linux-x86_64/xpi/kn.xpi",
+    "sha256": "abef2c1bdde6110552f170984e5e9fda0901f11be53df9a8ac349b1d83788d16",
+    "size": 519456
+  },
+  {
+    "type": "extra-data",
+    "filename": "ko.xpi",
+    "url": "https://archive.mozilla.org/pub/firefox/releases/52.6.0esr/linux-x86_64/xpi/ko.xpi",
+    "sha256": "209db638f9c51a1e0c19d71dd0eec6b11381220bc90ff34a565a91737f44b8c8",
+    "size": 463630
+  },
+  {
+    "type": "extra-data",
+    "filename": "lij.xpi",
+    "url": "https://archive.mozilla.org/pub/firefox/releases/52.6.0esr/linux-x86_64/xpi/lij.xpi",
+    "sha256": "f4a947eeff18c03ea3dbe64e567d1f7b02e58876ffa4374b6493e1ab966c34cd",
+    "size": 421071
+  },
+  {
+    "type": "extra-data",
+    "filename": "lt.xpi",
+    "url": "https://archive.mozilla.org/pub/firefox/releases/52.6.0esr/linux-x86_64/xpi/lt.xpi",
+    "sha256": "c4106fa79e4dab2434c97ebabe6ae0172fc60c1cfba606ac6edbbcc3ce6e0053",
+    "size": 452235
+  },
+  {
+    "type": "extra-data",
+    "filename": "lv.xpi",
+    "url": "https://archive.mozilla.org/pub/firefox/releases/52.6.0esr/linux-x86_64/xpi/lv.xpi",
+    "sha256": "f39b922d09317d4b9f40d4b40278c6c6e80d8f960b24ad1841f54f94591571ad",
+    "size": 448450
+  },
+  {
+    "type": "extra-data",
+    "filename": "mai.xpi",
+    "url": "https://archive.mozilla.org/pub/firefox/releases/52.6.0esr/linux-x86_64/xpi/mai.xpi",
+    "sha256": "03ec8758d245bbc0bda331811b086a6999c53499e54aa64d3f5055a3fcb0712e",
+    "size": 499840
+  },
+  {
+    "type": "extra-data",
+    "filename": "mk.xpi",
+    "url": "https://archive.mozilla.org/pub/firefox/releases/52.6.0esr/linux-x86_64/xpi/mk.xpi",
+    "sha256": "7bb59f04f8da5a4745621f37e135ab756c58324d7dd524ca91079623e47b5fb0",
+    "size": 496200
+  },
+  {
+    "type": "extra-data",
+    "filename": "ml.xpi",
+    "url": "https://archive.mozilla.org/pub/firefox/releases/52.6.0esr/linux-x86_64/xpi/ml.xpi",
+    "sha256": "2144f34cb7c299a98ea267cde9fe13c737b43b40ec46a8b70fb5defbd21f2b7d",
+    "size": 516486
+  },
+  {
+    "type": "extra-data",
+    "filename": "mr.xpi",
+    "url": "https://archive.mozilla.org/pub/firefox/releases/52.6.0esr/linux-x86_64/xpi/mr.xpi",
+    "sha256": "6fe9044ea2e3aa88f05d0e030d13fa3c44b60ab39a87debd7c38707781ca5ef8",
+    "size": 502431
+  },
+  {
+    "type": "extra-data",
+    "filename": "ms.xpi",
+    "url": "https://archive.mozilla.org/pub/firefox/releases/52.6.0esr/linux-x86_64/xpi/ms.xpi",
+    "sha256": "1d5b8f9552c1684711f3357e78ab72b68c2eb31a1ac1dfebf774070bc558d8d3",
+    "size": 435990
+  },
+  {
+    "type": "extra-data",
+    "filename": "nb-NO.xpi",
+    "url": "https://archive.mozilla.org/pub/firefox/releases/52.6.0esr/linux-x86_64/xpi/nb-NO.xpi",
+    "sha256": "89c33632569d2d734ce64b00544191cafa58bcb55ee56bbbebe0397c57327fe8",
+    "size": 434412
+  },
+  {
+    "type": "extra-data",
+    "filename": "nl.xpi",
+    "url": "https://archive.mozilla.org/pub/firefox/releases/52.6.0esr/linux-x86_64/xpi/nl.xpi",
+    "sha256": "a3339ba542ada3a66ed74102da9eb13a66e44796da45074ecfc5f32a3022a1b6",
+    "size": 432007
+  },
+  {
+    "type": "extra-data",
+    "filename": "nn-NO.xpi",
+    "url": "https://archive.mozilla.org/pub/firefox/releases/52.6.0esr/linux-x86_64/xpi/nn-NO.xpi",
+    "sha256": "ae945997bb4f857b0cd9c50c8c1385e4bf81ea24774410a3105f66f739645e39",
+    "size": 428645
+  },
+  {
+    "type": "extra-data",
+    "filename": "or.xpi",
+    "url": "https://archive.mozilla.org/pub/firefox/releases/52.6.0esr/linux-x86_64/xpi/or.xpi",
+    "sha256": "cbc71a0c082527c7647fee6b01ea8555979b34f2efdc633191e7d65904b35ff4",
+    "size": 496917
+  },
+  {
+    "type": "extra-data",
+    "filename": "pa-IN.xpi",
+    "url": "https://archive.mozilla.org/pub/firefox/releases/52.6.0esr/linux-x86_64/xpi/pa-IN.xpi",
+    "sha256": "33e3ee4bb8146393dd4e6c9ba9bf7cb5825fc0b1ff9d6f822f06ced67b12a628",
+    "size": 476587
+  },
+  {
+    "type": "extra-data",
+    "filename": "pl.xpi",
+    "url": "https://archive.mozilla.org/pub/firefox/releases/52.6.0esr/linux-x86_64/xpi/pl.xpi",
+    "sha256": "16c0ee37dd711be47d1b76875abb4badc0438f66bd42e869aa2d587e0658c16b",
+    "size": 352851
+  },
+  {
+    "type": "extra-data",
+    "filename": "pt-BR.xpi",
+    "url": "https://archive.mozilla.org/pub/firefox/releases/52.6.0esr/linux-x86_64/xpi/pt-BR.xpi",
+    "sha256": "29f12ef8f136a9fc96dd72e1a7bd242bd31e347b88a3fa911d87fafb075e1e1c",
+    "size": 438170
+  },
+  {
+    "type": "extra-data",
+    "filename": "pt-PT.xpi",
+    "url": "https://archive.mozilla.org/pub/firefox/releases/52.6.0esr/linux-x86_64/xpi/pt-PT.xpi",
+    "sha256": "1705dc2f12bb4613fc738d30cff94f2f15273e6e3cc6e724fec7829cb2327c5b",
+    "size": 436727
+  },
+  {
+    "type": "extra-data",
+    "filename": "rm.xpi",
+    "url": "https://archive.mozilla.org/pub/firefox/releases/52.6.0esr/linux-x86_64/xpi/rm.xpi",
+    "sha256": "c42625fcd5e8d6f47900616e12fbc1b991c38c4060e9e1f13b753d9fff74b64e",
+    "size": 434607
+  },
+  {
+    "type": "extra-data",
+    "filename": "ro.xpi",
+    "url": "https://archive.mozilla.org/pub/firefox/releases/52.6.0esr/linux-x86_64/xpi/ro.xpi",
+    "sha256": "f66a8fba38952c3e7a4dccdda906499efa46df92aa7146f86d9968b49925ad90",
+    "size": 449938
+  },
+  {
+    "type": "extra-data",
+    "filename": "ru.xpi",
+    "url": "https://archive.mozilla.org/pub/firefox/releases/52.6.0esr/linux-x86_64/xpi/ru.xpi",
+    "sha256": "0026b03bbd836dbd23bb75351cc74bcd0edea116e850c4302386b90dfc802197",
+    "size": 395364
+  },
+  {
+    "type": "extra-data",
+    "filename": "si.xpi",
+    "url": "https://archive.mozilla.org/pub/firefox/releases/52.6.0esr/linux-x86_64/xpi/si.xpi",
+    "sha256": "b4e1cf744a220190e3e268f48b1b7a9603f56c8e2892db33cc397a711f54bb28",
+    "size": 491959
+  },
+  {
+    "type": "extra-data",
+    "filename": "sk.xpi",
+    "url": "https://archive.mozilla.org/pub/firefox/releases/52.6.0esr/linux-x86_64/xpi/sk.xpi",
+    "sha256": "cf78b00ca0abed55f0bf3c449a819efceb8bee5a6398b89a5024de00b7c39ec4",
+    "size": 455820
+  },
+  {
+    "type": "extra-data",
+    "filename": "sl.xpi",
+    "url": "https://archive.mozilla.org/pub/firefox/releases/52.6.0esr/linux-x86_64/xpi/sl.xpi",
+    "sha256": "35a00a45480bbc29c1b27ab0435f64bf10cbfa0160d6485f3577d17eafff00d0",
+    "size": 433482
+  },
+  {
+    "type": "extra-data",
+    "filename": "son.xpi",
+    "url": "https://archive.mozilla.org/pub/firefox/releases/52.6.0esr/linux-x86_64/xpi/son.xpi",
+    "sha256": "a028353312de00c9676f8c493981c3b20fb707d299391365aa4c0fc2623ec4d6",
+    "size": 435128
+  },
+  {
+    "type": "extra-data",
+    "filename": "sq.xpi",
+    "url": "https://archive.mozilla.org/pub/firefox/releases/52.6.0esr/linux-x86_64/xpi/sq.xpi",
+    "sha256": "da221e666be72cbee464d7dd042a5d4661e6cd8b97f55fbe3274f9f9fc9f9f6f",
+    "size": 448156
+  },
+  {
+    "type": "extra-data",
+    "filename": "sr.xpi",
+    "url": "https://archive.mozilla.org/pub/firefox/releases/52.6.0esr/linux-x86_64/xpi/sr.xpi",
+    "sha256": "677eba676cd087a741a353deca7484990f982c937a1e55718980b6ed9c5b8273",
+    "size": 463394
+  },
+  {
+    "type": "extra-data",
+    "filename": "sv-SE.xpi",
+    "url": "https://archive.mozilla.org/pub/firefox/releases/52.6.0esr/linux-x86_64/xpi/sv-SE.xpi",
+    "sha256": "aa89af6de04695ab40e002b60944f813c44f47dc042e2262de453f3b1380398e",
+    "size": 441177
+  },
+  {
+    "type": "extra-data",
+    "filename": "ta.xpi",
+    "url": "https://archive.mozilla.org/pub/firefox/releases/52.6.0esr/linux-x86_64/xpi/ta.xpi",
+    "sha256": "f31ad59ed0f933cbc35732905f10dcb922200580f265f6f468b815910e0994d3",
+    "size": 494799
+  },
+  {
+    "type": "extra-data",
+    "filename": "te.xpi",
+    "url": "https://archive.mozilla.org/pub/firefox/releases/52.6.0esr/linux-x86_64/xpi/te.xpi",
+    "sha256": "8c1f270e4bb4faa9612cb0e2b406f8d5e83b7948ac75a4a46d8149836894523a",
+    "size": 515241
+  },
+  {
+    "type": "extra-data",
+    "filename": "th.xpi",
+    "url": "https://archive.mozilla.org/pub/firefox/releases/52.6.0esr/linux-x86_64/xpi/th.xpi",
+    "sha256": "5e9699ad7413491a2f3b507d762ffb2c214340495b6bab3783b10e929f344d0b",
+    "size": 489379
+  },
+  {
+    "type": "extra-data",
+    "filename": "tr.xpi",
+    "url": "https://archive.mozilla.org/pub/firefox/releases/52.6.0esr/linux-x86_64/xpi/tr.xpi",
+    "sha256": "217168858a187a6b16b4bbcd5028c88fc4d5ae00c8690b3aa45ff9756e9d6835",
+    "size": 443674
+  },
+  {
+    "type": "extra-data",
+    "filename": "uk.xpi",
+    "url": "https://archive.mozilla.org/pub/firefox/releases/52.6.0esr/linux-x86_64/xpi/uk.xpi",
+    "sha256": "34940a1df6f3318dfa1be037f1bdb9a554b8cfabdb02a04b40af3abaed26af41",
+    "size": 495095
+  },
+  {
+    "type": "extra-data",
+    "filename": "uz.xpi",
+    "url": "https://archive.mozilla.org/pub/firefox/releases/52.6.0esr/linux-x86_64/xpi/uz.xpi",
+    "sha256": "e0ff4b93fbbd4aaf47f3c4a39655227d1b23c5b30ec5efec4257aff129bb7534",
+    "size": 447916
+  },
+  {
+    "type": "extra-data",
+    "filename": "vi.xpi",
+    "url": "https://archive.mozilla.org/pub/firefox/releases/52.6.0esr/linux-x86_64/xpi/vi.xpi",
+    "sha256": "f82062e7de4cb915e5d448d068a7a226adc8edceb7741c152ec47db646e512e8",
+    "size": 450805
+  },
+  {
+    "type": "extra-data",
+    "filename": "xh.xpi",
+    "url": "https://archive.mozilla.org/pub/firefox/releases/52.6.0esr/linux-x86_64/xpi/xh.xpi",
+    "sha256": "bcf356354dff181d2e099dd5b79179214db631877e116cb9f873ccef26cb4ee3",
+    "size": 441172
+  },
+  {
+    "type": "extra-data",
+    "filename": "zh-CN.xpi",
+    "url": "https://archive.mozilla.org/pub/firefox/releases/52.6.0esr/linux-x86_64/xpi/zh-CN.xpi",
+    "sha256": "5161d73cbac04ae00f167a975b21abaf1f8d27063ef4e3d11fdf7311c09fdcc6",
+    "size": 461678
+  },
+  {
+    "type": "extra-data",
+    "filename": "zh-TW.xpi",
+    "url": "https://archive.mozilla.org/pub/firefox/releases/52.6.0esr/linux-x86_64/xpi/zh-TW.xpi",
+    "sha256": "63ea5dee6df00d76b4dc8f162cbffcf26b632bfb5cec8d43543e815ba864d141",
+    "size": 470063
+  }
+]

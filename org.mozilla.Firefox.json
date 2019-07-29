@@ -1,0 +1,97 @@
+{
+  "app-id": "org.mozilla.Firefox",
+  "runtime": "org.freedesktop.Platform",
+  "runtime-version": "18.08",
+  "sdk": "org.freedesktop.Sdk",
+  "command": "firefox",
+  "separate-locales": false,
+  "finish-args": [
+    "--share=ipc",
+    "--socket=wayland",
+    "--socket=x11",
+    "--socket=pulseaudio",
+    "--share=network",
+    "--filesystem=home",
+    "--filesystem=/var/lib/codecs:ro",
+    "--env=LD_LIBRARY_PATH=/var/lib/codecs:/app/lib",
+    "--talk-name=org.gnome.GConf"
+  ],
+  "modules": [
+    "shared-modules/gtk2/gtk2.json",
+    {
+      "name": "unzip",
+      "no-autogen": true,
+      "sources": [
+        {
+          "type": "file",
+          "url": "http://ftp.us.debian.org/debian/pool/main/u/unzip/unzip_6.0-16+deb8u3_amd64.deb",
+          "sha256": "1ccc48a0a5d9a5fd655f7d319ca788f4de6cc65a7d33b525f2c5010a2fe9e224",
+          "dest-filename": "unzip.deb"
+        },
+        {
+          "type": "file",
+          "path": "binarydeb-Makefile",
+          "dest-filename": "Makefile"
+        }
+      ]
+    },
+    {
+      "name": "xmlstarlet",
+      "no-autogen": true,
+      "sources": [
+        {
+          "type": "file",
+          "url": "http://ftp.de.debian.org/debian/pool/main/x/xmlstarlet/xmlstarlet_1.6.1-1_amd64.deb",
+          "sha256": "754dc23a4836f156e111c3c7414f5438be653a6261745ef88bca5a4f5b53f133",
+          "dest-filename": "xmlstarlet.deb"
+        },
+        {
+          "type": "file",
+          "path": "binarydeb-Makefile",
+          "dest-filename": "Makefile"
+        }
+      ]
+    },
+    {
+      "name": "firefox",
+      "no-autogen": true,
+      "sources": [
+        {
+          "type": "file",
+          "path": "apply_extra"
+        },
+        {
+          "type": "file",
+          "path": "firefox.sh"
+        },
+        {
+          "type": "file",
+          "path": "org.mozilla.Firefox.desktop"
+        },
+        {
+          "type": "file",
+          "path": "org.mozilla.Firefox.appdata.xml"
+        },
+        {
+          "type": "file",
+          "url": "https://github.com/endlessm/eos-shell-content/raw/master/icons/bundle/64x64/apps/eos-app-org.mozilla.Firefox.png",
+          "sha256": "e4763960556cd5f54366fdc39c92079850975a89683f0335dfb166376dba92a2"
+        },
+        {
+          "type": "file",
+          "path": "endless-default-prefs.js"
+        },
+        {
+          "type": "file",
+          "path": "firefox-plugins-installer"
+        },
+        {
+          "type": "file",
+          "path": "firefox-Makefile",
+          "dest-filename": "Makefile"
+        },
+        "firefox-sources.json"
+      ]
+    }
+  ]
+}
