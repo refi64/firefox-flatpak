@@ -62,7 +62,10 @@
   </content_rating>
 
   <developer_name>The Mozilla Foundation</developer_name>
-  <url type="homepage">https://www.mozilla.org/</url>
+
+  <url type="homepage">https://www.mozilla.org/firefox/</url>
+  <url type="donation">https://donate.mozilla.org/</url>
   <url type="bugtracker">https://bugzilla.mozilla.org/describecomponents.cgi?product=Firefox</url>
-  <url type="help">https://support.mozilla.org/en-US/kb/get-started-firefox-overview-main-features</url>
+  <url type="help">https://support.mozilla.org/</url>
+  <url type="translate">https://wiki.mozilla.org/L10n:Starting_a_localization</url>
 </component>
