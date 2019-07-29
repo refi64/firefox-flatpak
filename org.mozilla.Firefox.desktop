@@ -29,6 +29,6 @@ Comment[zh_TW]=Mozilla 的熱門網頁瀏覽器
 Exec=firefox %u
 Icon=org.mozilla.Firefox
 Terminal=false
-Categories=Network;WebBrowser;
+Categories=Network;WebBrowser;Utility;
 MimeType=text/html;text/xml;application/xhtml_xml;x-scheme-handler/http;x-scheme-handler/https;
 X-Endless-LaunchMaximized=true
