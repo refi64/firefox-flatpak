@@ -1,6 +1,6 @@
 include Makefile.config
 
-json := org.mozilla.Firefox.json
+json := org.mozilla.Firefox.yaml
 app := firefox
 
 all: test
