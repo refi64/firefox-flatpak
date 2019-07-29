@@ -63,6 +63,7 @@ modules:
       - 'install -Dm 644 eos-app-org.mozilla.Firefox.png /app/share/icons/hicolor/64x64/apps/org.mozilla.Firefox.png'
 
       - 'install -Dm 644 -t /app/firefox/data endless-default-prefs.js'
+      - 'install -Dm 644 -t /app/firefox/data distribution.ini'
     sources:
       - type: script
         dest-filename: firefox.sh
@@ -94,6 +95,7 @@ modules:
             ln -s /app/firefox/plugins firefox/browser
 
             mkdir -p firefox/{distribution/extensions,browser/defaults/preferences}
+            ln -s /app/firefox/data/distribution.ini firefox/distribution
             ln -s /app/firefox/data/endless-default-prefs.js firefox/browser/defaults/preferences
 
             for xpi in *.xpi; do
@@ -109,6 +111,8 @@ modules:
       - type: file
         url: https://github.com/endlessm/eos-shell-content/raw/master/icons/bundle/64x64/apps/eos-app-org.mozilla.Firefox.png
         sha256: e4763960556cd5f54366fdc39c92079850975a89683f0335dfb166376dba92a2
+      - type: file
+        path: distribution.ini
       - type: file
         path: endless-default-prefs.js
       - firefox-sources.json
