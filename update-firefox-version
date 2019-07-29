@@ -34,7 +34,7 @@ import urllib.error
 import urllib.request
 
 
-CURRENT_VERSION = '52.6.0esr'
+CURRENT_VERSION = '68.0.1'
 
 
 ExtraDataInfo = collections.namedtuple('ExtraDataInfo', ['filename', 'url', 'sha256', 'size'])
