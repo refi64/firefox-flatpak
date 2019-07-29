@@ -46,9 +46,9 @@
   <description xml:lang="zh_TW"><p>Firefox 是世界上最熱門的網頁瀏覽器之一。** 需要網路</p></description>
 
   <screenshots>
-    <screenshot type="default">
-      <image>https://d3lapyynmdp1i9.cloudfront.net/screenshots/org.mozilla.Firefox/C/org.mozilla.firefox-screenshot1.jpg</image>
-    </screenshot>
+    <screenshot type="default">https://raw.githubusercontent.com/hughsie/fedora-appstream/master/screenshots-extra/firefox/a.png</screenshot>
+    <screenshot>https://raw.githubusercontent.com/hughsie/fedora-appstream/master/screenshots-extra/firefox/b.png</screenshot>
+    <screenshot>https://raw.githubusercontent.com/hughsie/fedora-appstream/master/screenshots-extra/firefox/c.png</screenshot>
   </screenshots>
 
   <metadata>
