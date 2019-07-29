@@ -26,6 +26,12 @@ release: $(app).yaml | release-repo
 	$(call ensure_config_var_set,RELEASE_GPG_KEY)
 	$(MAKE) _manifest arg_manifest=$< arg_release=1
 
+test-flash: flash/com.adobe.FlashPlayer.NPAPI.yaml
+	$(MAKE) _manifest arg_manifest=$<
+
+release-flash: flash/com.adobe.FlashPlayer.NPAPI.yaml
+	$(MAKE) _manifest arg_manifest=$< arg_release=1
+
 clean:
 	rm -rf $(buildroot)
 
