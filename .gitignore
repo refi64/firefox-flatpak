@@ -1,4 +1,5 @@
 .flatpak-builder/
+_build/
 repo/
 repo-release/
 *gpg
