@@ -1,4 +1,5 @@
 [Desktop Entry]
+Version=1.0
 Type=Application
 Name=Firefox
 Name[ar]=فايرفوكس
@@ -29,6 +30,8 @@ Comment[zh_TW]=Mozilla 的熱門網頁瀏覽器
 Exec=firefox %u
 Icon=org.mozilla.Firefox
 Terminal=false
+StartupNotify=true
 Categories=Network;WebBrowser;Utility;
-MimeType=text/html;text/xml;application/xhtml_xml;x-scheme-handler/http;x-scheme-handler/https;
+Keywords=web;browser;internet;
+MimeType=text/html;text/xml;application/xhtml+xml;application/vnd.mozilla.xul+xml;text/mml;x-scheme-handler/http;x-scheme-handler/https;
 X-Endless-LaunchMaximized=true
