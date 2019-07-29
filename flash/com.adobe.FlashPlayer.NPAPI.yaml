@@ -1,0 +1,45 @@
+app-id: com.adobe.FlashPlayer.NPAPI
+runtime: org.mozilla.Firefox
+sdk: org.freedesktop.Sdk//18.08
+build-extension: true
+finish-args:
+  - --require-version=1.4.2
+build-options:
+  prefix: /app/firefox/flash
+  append-path: /app/firefox/flash/bin
+  append-ld-library-path: /app/firefox/flash/lib
+  append-pkg-config-path: /app/firefox/flash/lib/pkgconfig
+modules:
+  - ../shared-modules/gtk2/gtk2.json
+
+  - name: flash
+    buildsystem: simple
+    build-commands:
+      - install -Dm 755 -t ${FLATPAK_DEST}/bin apply_extra
+      - mkdir -p ${FLATPAK_DEST}/plugins
+      - ln -s ${FLATPAK_DEST}/extra/libflashplayer.so ${FLATPAK_DEST}/plugins
+    sources:
+      - type: script
+        dest-filename: apply_extra
+        commands:
+          - tar xf flash_player_npapi_linux.tar.gz libflashplayer.so
+          - rm flash_player_npapi_linux.tar.gz
+          - chmod +x libflashplayer.so
+      - type: extra-data
+        filename: flash_player_npapi_linux.tar.gz
+        only-arches: [x86_64]
+        url: https://fpdownload.adobe.com/get/flashplayer/pdc/32.0.0.223/flash_player_npapi_linux.x86_64.tar.gz
+        sha256: 9fed6437ac8903f0b289e84193c39bfca8ada2467c93acc50ee8de77517a0b1e
+        size: 9052736
+        x-checker-data:
+          type: flash
+          browser: Firefox
+      - type: extra-data
+        filename: flash_player_npapi_linux.tar.gz
+        only-arches: [i386]
+        url: https://fpdownload.adobe.com/get/flashplayer/pdc/32.0.0.223/flash_player_npapi_linux.i386.tar.gz
+        sha256: c206abb44d2940907c3a93475fa614b8a1b8fb127fbd215b66e36d5eedaf56fc
+        size: 8537551
+        x-checker-data:
+          type: flash
+          browser: Firefox
