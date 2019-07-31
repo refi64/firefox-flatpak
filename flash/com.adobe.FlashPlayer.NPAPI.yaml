@@ -2,6 +2,7 @@ app-id: com.adobe.FlashPlayer.NPAPI
 runtime: org.mozilla.Firefox
 sdk: org.freedesktop.Sdk//18.08
 build-extension: true
+appstream-compose: false
 finish-args:
   - --require-version=1.4.2
 modules:
@@ -11,7 +12,11 @@ modules:
       - install -Dm 755 -t ${FLATPAK_DEST}/bin apply_extra
       - mkdir -p ${FLATPAK_DEST}/plugins
       - ln -s ${FLATPAK_DEST}/extra/libflashplayer.so ${FLATPAK_DEST}/plugins
+      - install -Dt ${FLATPAK_DEST}/share/metainfo com.adobe.FlashPlayer.NPAPI.appdata.xml
+      - appstream-compose --basename=com.adobe.FlashPlayer.NPAPI --prefix=${FLATPAK_DEST} --origin=flatpak com.adobe.FlashPlayer.NPAPI
     sources:
+      - type: file
+        path: com.adobe.FlashPlayer.NPAPI.appdata.xml
       - type: script
         dest-filename: apply_extra
         commands:
