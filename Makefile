@@ -19,17 +19,17 @@ _manifest:
 	flatpak-builder --force-clean --repo=$(manifest_command_repo) --ccache $(manifest_command_gpg_args) $(buildroot)/$(basename $(arg_manifest)) $(arg_manifest)
 	flatpak build-update-repo $(manifest_command_repo) $(if $(arg_release),--generate-static-deltas) $(manifest_command_gpg_args)
 
-test: $(app).yaml | repo
+test: $(app).json | repo
 	$(MAKE) _manifest arg_repo=repo arg_manifest=$<
 
-release: $(app).yaml | release-repo
+release: $(app).json | release-repo
 	$(call ensure_config_var_set,RELEASE_GPG_KEY)
 	$(MAKE) _manifest arg_manifest=$< arg_release=1
 
-test-flash: flash/com.adobe.FlashPlayer.NPAPI.yaml
+test-flash: flash/com.adobe.FlashPlayer.NPAPI.json
 	$(MAKE) _manifest arg_manifest=$<
 
-release-flash: flash/com.adobe.FlashPlayer.NPAPI.yaml
+release-flash: flash/com.adobe.FlashPlayer.NPAPI.json
 	$(MAKE) _manifest arg_manifest=$< arg_release=1
 
 clean:
