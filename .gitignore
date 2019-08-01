@@ -1,5 +1,6 @@
-persist/
 .flatpak-builder/
+_build/
 repo/
-tmp/
+repo-release/
 *gpg
+*.flatpakref

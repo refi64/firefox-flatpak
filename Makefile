@@ -1,21 +1,39 @@
 include Makefile.config
 
-json := org.mozilla.Firefox.json
-app := firefox
+app := org.mozilla.Firefox
+buildroot := _build
+
+ensure_config_var_set = @$(if $($(1)),:,echo Must set $(1) in Makefile.config; false)
+
+manifest_command_gpg_args = $(if $(arg_release),--gpg-homedir=gpg --gpg-sign=$(RELEASE_GPG_KEY),)
+manifest_command_repo = $(if $(arg_release),release-repo,repo)
 
 all: test
 
-test: repo $(json)
-	flatpak-builder --force-clean --repo=repo --ccache --require-changes $(app) $(json)
-	flatpak build-update-repo repo
+remote-add:
+	flatpak remote-add --user firefox $(PWD)/repo --no-gpg-verify
 
-release: release-repo $(json)
-	if [ "x${RELEASE_GPG_KEY}" == "x" ]; then echo Must set RELEASE_GPG_KEY in Makefile.config, try \'make gpg-key\'; exit 1; fi
-	flatpak-builder --force-clean --repo=release-repo  --ccache --gpg-homedir=gpg --gpg-sign=${RELEASE_GPG_KEY} $(app) $(json)
-	flatpak build-update-repo --generate-static-deltas --gpg-homedir=gpg --gpg-sign=${RELEASE_GPG_KEY} release-repo
+_manifest:
+	@$(if $(arg_manifest),:,echo make _manifest is an internal command; false)
+	@mkdir -p $(buildroot)
+	flatpak-builder --force-clean --repo=$(manifest_command_repo) --ccache $(manifest_command_gpg_args) $(buildroot)/$(basename $(arg_manifest)) $(arg_manifest)
+	flatpak build-update-repo $(manifest_command_repo) $(if $(arg_release),--generate-static-deltas) $(manifest_command_gpg_args)
+
+test: $(app).json | repo
+	$(MAKE) _manifest arg_repo=repo arg_manifest=$<
+
+release: $(app).json | release-repo
+	$(call ensure_config_var_set,RELEASE_GPG_KEY)
+	$(MAKE) _manifest arg_manifest=$< arg_release=1
+
+test-flash: flash/com.adobe.FlashPlayer.NPAPI.json
+	$(MAKE) _manifest arg_manifest=$<
+
+release-flash: flash/com.adobe.FlashPlayer.NPAPI.json
+	$(MAKE) _manifest arg_manifest=$< arg_release=1
 
 clean:
-	rm -rf $(app)/*
+	rm -rf $(buildroot)
 
 repo:
 	ostree init --mode=archive-z2 --repo=repo
@@ -24,10 +42,10 @@ release-repo:
 	ostree init --mode=archive-z2 --repo=release-repo
 
 gpg-key:
-	if [ "x${KEY_USER}" == "x" ]; then echo Must set KEY_USER in Makefile.config; exit 1; fi
+	$(call ensure_config_var_set,KEY_USER)
 	mkdir -p gpg
 	gpg2 --homedir gpg --quick-gen-key ${KEY_USER}
-	echo Enter the above gpg key id as RELEASE_GPG_KEY in Makefile.config
+	@echo Enter the above gpg key id as RELEASE_GPG_KEY in Makefile.config
 
 $(app).flatpakref: $(app).flatpakref.in
-	sed -e 's|@URL@|${URL}|g' -e 's|@GPG@|$(shell gpg2 --homedir=gpg --export ${RELEASE_GPG_KEY} | base64 | tr -d '\n')|' $< > $@
+	sed -e "s|@URL@|$(URL)g;s|@GPG@|$$(gpg2 --homedir=gpg --export $(RELEASE_GPG_KEY) | base64 | tr -d '\n')|g" $< > $@

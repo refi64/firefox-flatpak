@@ -7,5 +7,5 @@ IsRuntime=False
 GPGKey=@GPG@
 
 Comment=firefox
-Description=Firefox web browser
-Icon=https://assets.mozilla.org/view/0002/p_218.jpg
+Description=Firefox Web Browser
+Icon=https://design.firefox.com/product-identity/firefox/firefox/firefox-logo.png
