@@ -69,7 +69,7 @@
         "install -Dm 755 firefox-plugins-installer /app/bin/firefox-plugins-installer",
         "install -Dm 644 -t /app/share/metainfo org.mozilla.Firefox.appdata.xml",
         "install -Dm 644 -t /app/share/applications org.mozilla.Firefox.desktop",
-        "install -Dm 644 eos-app-org.mozilla.Firefox.png /app/share/icons/hicolor/64x64/apps/org.mozilla.Firefox.png",
+        "install -Dm 644 -t /app/share/icons/hicolor/scalable/apps org.mozilla.Firefox.svg",
         "install -Dm 644 -t /app/firefox/data endless-default-prefs.js",
         "install -Dm 644 -t /app/firefox/data distribution.ini"
       ],
@@ -96,8 +96,7 @@
         },
         {
           "type": "file",
-          "url": "https://github.com/endlessm/eos-shell-content/raw/master/icons/bundle/64x64/apps/eos-app-org.mozilla.Firefox.png",
-          "sha256": "e4763960556cd5f54366fdc39c92079850975a89683f0335dfb166376dba92a2"
+          "path": "org.mozilla.Firefox.svg"
         },
         {
           "type": "file",
