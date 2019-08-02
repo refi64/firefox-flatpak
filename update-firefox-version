@@ -92,7 +92,7 @@ class FirefoxJsonGenerator:
                 if dirname == 'en-US' or dirname == 'xpi':
                     self._sha256[filename] = digest
 
-    def _get_extra_data_info(self, url):
+    def _get_extra_data_info(self, url, out_filename=None):
         '''Fetches the extra data info for the given URL
 
         The extra data info fetched is the sha256 checksum, and size.
@@ -109,13 +109,16 @@ class FirefoxJsonGenerator:
         with urllib.request.urlopen(url) as response:
             size = int(response.getheader('Content-Length'))
 
+        if out_filename:
+            filename = out_filename
+
         return ExtraDataInfo(filename=filename, url=url, sha256=sha256, size=size)
 
     def _fetch_firefox_info(self):
         '''Fetches the info for this Firefox version.'''
         url = '{url}en-US/firefox-{version}.tar.bz2'.format(url=self._versioned_platform_url,
                                                             version=self._version)
-        return self._get_extra_data_info(url)
+        return self._get_extra_data_info(url, out_filename="firefox.tar.bz2")
 
     def _fetch_languages_info(self):
         '''Fetches the info for all the languages add-ons in this Firefox version.'''
@@ -143,8 +146,9 @@ class FirefoxJsonGenerator:
         extra_data_info = [self._fetch_firefox_info()] + self._fetch_languages_info()
 
         with open(self.JSON_FILE_NAME, 'w') as f:
-            json.dump(list(map(extra_data_info_encode, extra_data_info)), f, indent=2)
+            json.dump(list(map(extra_data_info_encode, extra_data_info)), f, indent=4)
             f.write('\n')
+
 
 if __name__ == '__main__':
     generator = FirefoxJsonGenerator(CURRENT_VERSION)

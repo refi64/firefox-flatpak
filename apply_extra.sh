@@ -1,7 +1,7 @@
 #!/usr/bin/bash
 
-tar xf firefox-*.tar.bz2
-rm firefox-*.tar.bz2
+tar xf firefox.tar.bz2
+rm firefox.tar.bz2
 
 ln -s /app/firefox/plugins firefox/browser
 
