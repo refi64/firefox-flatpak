@@ -1,6 +1,7 @@
 {
     "app-id": "com.adobe.FlashPlayer.NPAPI",
     "runtime": "org.mozilla.Firefox",
+    "runtime-version": "eos3",
     "sdk": "org.freedesktop.Sdk//18.08",
     "build-extension": true,
     "appstream-compose": false,
